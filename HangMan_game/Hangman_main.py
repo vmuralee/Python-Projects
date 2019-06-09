@@ -54,8 +54,10 @@ HangMan_pics = ['''
            
            ]
 
-words=['GROOT','IRONMAN','SPIDERMAN','THOR','ROCKET','DRAX','DOCTOR.STRANGE','CAPTAIN.AMERICA','HAWK.EYE','HULK','ANTMAN']
-
+#words=['GROOT','IRONMAN','SPIDERMAN','THOR','ROCKET','DRAX','DOCTOR.STRANGE','CAPTAIN.AMERICA','HAWK.EYE','HULK','ANTMAN']
+infile = open("words.txt", 'r');
+wds = infile.read()
+words= str(wds).split()
 def Index(letter,word):
 	new=[x*0 for x in range(0,len(word))]
 	pos=0
@@ -103,3 +105,4 @@ while(is_Over!=True):
                 if(n==7):
                         print("Better luck next time !!")
                         is_Over=True
+infile.close()
