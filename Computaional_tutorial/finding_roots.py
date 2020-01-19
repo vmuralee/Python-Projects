@@ -22,12 +22,12 @@ class Roots:
             x_2 = (user_func(self.x_up)*self.x_low-user_func(self.x_low)*self.x_up)/(user_func(self.x_up)-user_func(self.x_low))
             self.x_low = self.x_up
             self.x_up = x_2
-        print(x_2)
+        return x_2
     def NewtonRaphson(self):
         a = self.x_up
         for i in range(self.max_iter):
             a = a - user_func(a)/self.user_func_derv(a)
-        print(a.evalf())
+        return a.evalf()
 
     def Bisection(self):
         a,b=self.x_low,self.x_up
@@ -44,5 +44,3 @@ class Roots:
             else:
                 exit(1)
         print(x_mid)
-
-
