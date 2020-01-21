@@ -1,4 +1,5 @@
 #include<iostream>
+#include "Trapezoidal_rule.h"
 
 using namespace std;
 
@@ -39,6 +40,11 @@ double trapezoidal_rule(double a, double b, int n, double (*func)(double))
   return trapez_sum;
 }
 int main(){
-  cout<<trapezoidal_rule(0,1,10,func)<<endl;
-  cout<<rectangle_rule(0,1,100,func)<<endl;
+  //cout<<trapezoidal_rule(0,1,10,func)<<endl;
+  //cout<<rectangle_rule(0,1,100,func)<<endl;
+  Trapezoid_Integration* obj = new Trapezoid_Integration(0,1,20);
+  obj->set_value(0,1,10);
+  obj->TrapeIntegrate(func);
+  obj->print_value();
+  
 }
