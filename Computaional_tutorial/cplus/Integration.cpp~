@@ -1,0 +1,24 @@
+#include<iostream>
+
+using namespace std;
+
+double func(double x){
+
+
+}
+
+
+double rectangle_rule(double a, double b, int n, double (*func)(double))
+{
+  double rectangle_sum;
+  double fa, fb, x, step;
+  int j;
+  step=(b-a)/((double) n);
+  rectangle_sum=0.;
+  for (j = 0; j <= n; j++){
+    x = (j+0.5)*step+; // midpoint of a given rectangle
+    rectangle_sum+=(*func)(x); // add value of function.
+  }
+  rectangle_sum *= step; // multiply with step length.
+  return rectangle_sum;
+}
