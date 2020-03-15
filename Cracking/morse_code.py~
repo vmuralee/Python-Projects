@@ -1,0 +1,3 @@
+def alphabets():
+    dict alphas
+    alphas = {'A':'.-'}
